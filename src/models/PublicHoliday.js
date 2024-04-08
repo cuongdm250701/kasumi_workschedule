@@ -35,6 +35,9 @@ PublicHoliday.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
+    event_details: {
+      type: DataTypes.STRING,
+    },
   },
   {
     sequelize,

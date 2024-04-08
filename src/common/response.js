@@ -15,10 +15,10 @@ const return_response = ({ ctx, result }, { code, status, message }) => {
 };
 
 const response_create_or_update = (handler) => {
-  return async (req, res) => {
+  return async (ctx) => {
     try {
-      const result = await handler(req, res);
-      return_response({ res, result }, REST_FULL_API_CODE.CREATED_SUCCESS);
+      const result = await handler(ctx);
+      return_response({ ctx, result }, REST_FULL_API_CODE.CREATED_SUCCESS);
     } catch (error) {
       console.log(error);
     }
