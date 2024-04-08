@@ -1,0 +1,23 @@
+{
+  "name": "sample_project_koajs_v1",
+  "version": "1.0.0",
+  "description": "build app use koajs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "sync": "node src/config/sync.js"
+  },
+  "author": "cuong.domanh",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "koa": "^2.15.2",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^12.0.1",
+    "lodash": "^4.17.21",
+    "pg": "^8.11.5",
+    "sequelize": "^6.37.2"
+  }
+}
