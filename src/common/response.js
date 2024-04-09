@@ -9,7 +9,7 @@ const return_response = ({ ctx, result }, { code, status, message }) => {
   ctx.body = {
     status,
     code,
-    msg: message,
+    message: message,
     ...data,
   };
 };
@@ -37,10 +37,10 @@ const response_get = (handler) => {
 };
 
 const response_delete = (handler) => {
-  return async (req, res) => {
+  return async (ctx) => {
     try {
-      const result = await handler(req, res);
-      return_response({ res, result }, REST_FULL_API_CODE.DELETED_SUCCESS);
+      const result = await handler(ctx);
+      return_response({ ctx, result }, REST_FULL_API_CODE.DELETED_SUCCESS);
     } catch (error) {
       console.log(error);
     }
