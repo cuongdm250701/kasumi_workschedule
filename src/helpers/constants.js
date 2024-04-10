@@ -1,6 +1,6 @@
 const REST_FULL_API_CODE = {
   GET_SUCCESS: { code: 200, message: "Successfully" },
-  CREATED_SUCCESS: { code: 1, message: "Successfully" },
+  CREATED_SUCCESS: { code: 200, message: "Successfully" },
   DELETED_SUCCESS: { code: 200, message: "Successfully" },
   CREATE_FAIL: { code: 2, message: "Can't create this action" },
   NOT_FOUND: { code: 3, message: "Can't find user" },
@@ -13,7 +13,15 @@ const REST_FULL_API_CODE = {
     message: "Invalid token or expires",
   },
 };
-
+const LIST_PUBLIC_HOLIDAY_DEFAULT = [
+  {
+    type: 1,
+    month: 1,
+    date: 1,
+    year: new Date().getFullYear(),
+    event_detail: "元旦",
+  },
+];
 module.exports = {
   REST_FULL_API_CODE,
 };
