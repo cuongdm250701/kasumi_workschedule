@@ -15,6 +15,10 @@ Remark.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    process_month: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     remark_code: {
       type: DataTypes.STRING,
       allowNull: false,
